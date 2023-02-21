@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  HomeView.swift
 //  Sections
 //
 //  Created by Tony Ayoub on 21-02-2023.
@@ -8,7 +8,7 @@
 import SwiftUI
 import CoreData
 
-struct ContentView: View {
+struct HomeView: View {
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -39,6 +39,9 @@ struct ContentView: View {
                 }
             }
             Text("Select an item")
+        }
+        .task {
+            let page = await ViaPageService().getPage()
         }
     }
 
@@ -81,8 +84,8 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
-struct ContentView_Previews: PreviewProvider {
+struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
+        HomeView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }
