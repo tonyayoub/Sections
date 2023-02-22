@@ -21,6 +21,9 @@
 		F870E8C629A4CE4A0065CE41 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E8C529A4CE4A0065CE41 /* Page.swift */; };
 		F870E8C829A4DAF70065CE41 /* PageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E8C729A4DAF70065CE41 /* PageService.swift */; };
 		F870E8CA29A4DB250065CE41 /* ViaPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E8C929A4DB250065CE41 /* ViaPageService.swift */; };
+		F870E96229A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E96029A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift */; };
+		F870E96329A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E96129A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift */; };
+		F870E96929A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E96829A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +61,9 @@
 		F870E8C529A4CE4A0065CE41 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		F870E8C729A4DAF70065CE41 /* PageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageService.swift; sourceTree = "<group>"; };
 		F870E8C929A4DB250065CE41 /* ViaPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaPageService.swift; sourceTree = "<group>"; };
+		F870E96029A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedSection+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F870E96129A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedSection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F870E96829A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ManagedSection+CoreDataProperties.swift"; path = "Sections/Store/ManagedSection+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +94,7 @@
 		F870E87F29A473DC0065CE41 = {
 			isa = PBXGroup;
 			children = (
+				F870E96829A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift */,
 				F870E88A29A473DC0065CE41 /* Sections */,
 				F870E8A029A473DE0065CE41 /* SectionsTests */,
 				F870E8AA29A473DE0065CE41 /* SectionsUITests */,
@@ -174,6 +181,8 @@
 		F870E8BD29A4744D0065CE41 /* Store */ = {
 			isa = PBXGroup;
 			children = (
+				F870E96029A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift */,
+				F870E96129A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift */,
 				F870E89629A473DE0065CE41 /* Sections.xcdatamodeld */,
 				F870E89429A473DE0065CE41 /* Persistence.swift */,
 			);
@@ -334,6 +343,9 @@
 				F870E88E29A473DC0065CE41 /* HomeView.swift in Sources */,
 				F870E88C29A473DC0065CE41 /* SectionsApp.swift in Sources */,
 				F870E8C629A4CE4A0065CE41 /* Page.swift in Sources */,
+				F870E96229A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift in Sources */,
+				F870E96329A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift in Sources */,
+				F870E96929A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

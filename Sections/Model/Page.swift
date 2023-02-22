@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Page: Codable {
+struct Page: Decodable {
     let links: Link
     
     enum CodingKeys: String, CodingKey {
@@ -15,7 +15,7 @@ struct Page: Codable {
     }
 }
 
-struct Link: Codable {
+struct Link: Decodable {
     let sections: [Section]
     
     enum CodingKeys: String, CodingKey {
@@ -23,8 +23,26 @@ struct Link: Codable {
     }
 }
 
-struct Section: Codable {
+struct Section: Decodable {
     let title: String
+    let uuid: UUID
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case uuid = "id"
+    }
+
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        self.title = try container.decode(String.self, forKey: .title)
+        print("title: \(title)")
+        if let uuid = try? container.decode(UUID.self, forKey: .uuid) {
+            self.uuid = uuid
+        } else {
+            print("UUID is not valid. A new UUID will be assigned")
+            self.uuid = UUID()
+        }
+    }
 }
 
 
