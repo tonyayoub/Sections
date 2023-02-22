@@ -8,6 +8,5 @@
 import Foundation
 
 protocol SectionStore {
-    func replaceExistingSections(sections: [Section])
-    func clearExistingSections()
+    func updateSections(sections: [Section])
 }

@@ -22,9 +22,6 @@ struct HomeView: View {
         .task {
             await syncing.syncWithBackend()
         }
-        .refreshable {
-            await syncing.clear()
-        }
     }
 }
 
