@@ -15,6 +15,10 @@ extension ManagedSection {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<ManagedSection> {
         return NSFetchRequest<ManagedSection>(entityName: "Section")
     }
+
+    @NSManaged public var title: String?
+    @NSManaged public var uuid: UUID?
+
 }
 
 extension ManagedSection : Identifiable {

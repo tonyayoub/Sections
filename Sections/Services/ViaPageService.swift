@@ -9,16 +9,17 @@ import Foundation
 
 struct ViaPageService: PageService {
     let urlString = "https://content.viaplay.com/ios-se"
-    func getPage() async -> Page? {
-        guard let url = URL(string: urlString) else { return nil }
+    func getSections() async -> [Section] {
+        guard let url = URL(string: urlString) else { return [] }
         
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
-            let page = try? JSONDecoder().decode(Page.self, from: data)
-            return page
+            let page = try JSONDecoder().decode(Page.self, from: data)
+            let sections = page.links.sections.map { Section(title: $0.title, uuid: $0.uuid) }
+            return sections
         } catch {
             print("Error decoding api response: \(error.localizedDescription)")
-            return nil
+            return []
         }
     }
 }

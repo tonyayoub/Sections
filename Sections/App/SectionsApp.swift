@@ -13,8 +13,16 @@ struct SectionsApp: App {
 
     var body: some Scene {
         WindowGroup {
-            HomeView()
+            HomeView(syncing: syncing)
                 .environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
+    }
+    
+    var syncing: Syncing {
+        Syncing(
+            service: ViaPageService(),
+            store: CoreDataSectionStore(
+                context: persistenceController.container.viewContext
+            ))
     }
 }

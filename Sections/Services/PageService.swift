@@ -8,5 +8,5 @@
 import Foundation
 
 protocol PageService {
-    func getPage() async -> Page?
+    func getSections() async -> [Section]
 }

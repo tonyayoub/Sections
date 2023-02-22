@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F83C3E4029A5D2DE00A65FBE /* ManagedSection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83C3E3E29A5D2DE00A65FBE /* ManagedSection+CoreDataClass.swift */; };
+		F83C3E4129A5D2DE00A65FBE /* ManagedSection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83C3E3F29A5D2DE00A65FBE /* ManagedSection+CoreDataProperties.swift */; };
 		F870E88C29A473DC0065CE41 /* SectionsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E88B29A473DC0065CE41 /* SectionsApp.swift */; };
 		F870E88E29A473DC0065CE41 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E88D29A473DC0065CE41 /* HomeView.swift */; };
 		F870E89029A473DE0065CE41 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F870E88F29A473DE0065CE41 /* Assets.xcassets */; };
@@ -21,9 +23,9 @@
 		F870E8C629A4CE4A0065CE41 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E8C529A4CE4A0065CE41 /* Page.swift */; };
 		F870E8C829A4DAF70065CE41 /* PageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E8C729A4DAF70065CE41 /* PageService.swift */; };
 		F870E8CA29A4DB250065CE41 /* ViaPageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E8C929A4DB250065CE41 /* ViaPageService.swift */; };
-		F870E96229A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E96029A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift */; };
-		F870E96329A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E96129A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift */; };
-		F870E96929A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E96829A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift */; };
+		F870E96B29A5BB6B0065CE41 /* SectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E96A29A5BB6B0065CE41 /* SectionStore.swift */; };
+		F870E96D29A5BCE60065CE41 /* CoreDataSectionStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E96C29A5BCE60065CE41 /* CoreDataSectionStore.swift */; };
+		F870E97429A5C11D0065CE41 /* Syncing.swift in Sources */ = {isa = PBXBuildFile; fileRef = F870E97329A5C11D0065CE41 /* Syncing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F83C3E3E29A5D2DE00A65FBE /* ManagedSection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedSection+CoreDataClass.swift"; sourceTree = "<group>"; };
+		F83C3E3F29A5D2DE00A65FBE /* ManagedSection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedSection+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		F870E88829A473DC0065CE41 /* Sections.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sections.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F870E88B29A473DC0065CE41 /* SectionsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionsApp.swift; sourceTree = "<group>"; };
 		F870E88D29A473DC0065CE41 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -61,9 +65,9 @@
 		F870E8C529A4CE4A0065CE41 /* Page.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
 		F870E8C729A4DAF70065CE41 /* PageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageService.swift; sourceTree = "<group>"; };
 		F870E8C929A4DB250065CE41 /* ViaPageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaPageService.swift; sourceTree = "<group>"; };
-		F870E96029A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedSection+CoreDataClass.swift"; sourceTree = "<group>"; };
-		F870E96129A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ManagedSection+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		F870E96829A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "ManagedSection+CoreDataProperties.swift"; path = "Sections/Store/ManagedSection+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		F870E96A29A5BB6B0065CE41 /* SectionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionStore.swift; sourceTree = "<group>"; };
+		F870E96C29A5BCE60065CE41 /* CoreDataSectionStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataSectionStore.swift; sourceTree = "<group>"; };
+		F870E97329A5C11D0065CE41 /* Syncing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Syncing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +98,6 @@
 		F870E87F29A473DC0065CE41 = {
 			isa = PBXGroup;
 			children = (
-				F870E96829A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift */,
 				F870E88A29A473DC0065CE41 /* Sections */,
 				F870E8A029A473DE0065CE41 /* SectionsTests */,
 				F870E8AA29A473DE0065CE41 /* SectionsUITests */,
@@ -115,9 +118,10 @@
 		F870E88A29A473DC0065CE41 /* Sections */ = {
 			isa = PBXGroup;
 			children = (
+				F870E8BF29A4C8B00065CE41 /* UI */,
+				F870E97229A5C1030065CE41 /* Syncing */,
 				F870E8BB29A4742B0065CE41 /* Model */,
 				F870E8BA29A474010065CE41 /* Services */,
-				F870E8BF29A4C8B00065CE41 /* UI */,
 				F870E8BE29A4746E0065CE41 /* Resources */,
 				F870E8BD29A4744D0065CE41 /* Store */,
 				F870E8BC29A474380065CE41 /* App */,
@@ -181,10 +185,12 @@
 		F870E8BD29A4744D0065CE41 /* Store */ = {
 			isa = PBXGroup;
 			children = (
-				F870E96029A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift */,
-				F870E96129A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift */,
+				F83C3E3E29A5D2DE00A65FBE /* ManagedSection+CoreDataClass.swift */,
+				F83C3E3F29A5D2DE00A65FBE /* ManagedSection+CoreDataProperties.swift */,
 				F870E89629A473DE0065CE41 /* Sections.xcdatamodeld */,
 				F870E89429A473DE0065CE41 /* Persistence.swift */,
+				F870E96A29A5BB6B0065CE41 /* SectionStore.swift */,
+				F870E96C29A5BCE60065CE41 /* CoreDataSectionStore.swift */,
 			);
 			path = Store;
 			sourceTree = "<group>";
@@ -203,6 +209,14 @@
 				F870E88D29A473DC0065CE41 /* HomeView.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		F870E97229A5C1030065CE41 /* Syncing */ = {
+			isa = PBXGroup;
+			children = (
+				F870E97329A5C11D0065CE41 /* Syncing.swift */,
+			);
+			path = Syncing;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -336,16 +350,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F870E96D29A5BCE60065CE41 /* CoreDataSectionStore.swift in Sources */,
 				F870E8CA29A4DB250065CE41 /* ViaPageService.swift in Sources */,
+				F870E97429A5C11D0065CE41 /* Syncing.swift in Sources */,
 				F870E89529A473DE0065CE41 /* Persistence.swift in Sources */,
 				F870E89829A473DE0065CE41 /* Sections.xcdatamodeld in Sources */,
 				F870E8C829A4DAF70065CE41 /* PageService.swift in Sources */,
 				F870E88E29A473DC0065CE41 /* HomeView.swift in Sources */,
+				F870E96B29A5BB6B0065CE41 /* SectionStore.swift in Sources */,
+				F83C3E4029A5D2DE00A65FBE /* ManagedSection+CoreDataClass.swift in Sources */,
 				F870E88C29A473DC0065CE41 /* SectionsApp.swift in Sources */,
 				F870E8C629A4CE4A0065CE41 /* Page.swift in Sources */,
-				F870E96229A5AFFE0065CE41 /* ManagedSection+CoreDataClass.swift in Sources */,
-				F870E96329A5AFFE0065CE41 /* ManagedSection+CoreDataProperties.swift in Sources */,
-				F870E96929A5B1150065CE41 /* ManagedSection+CoreDataProperties.swift in Sources */,
+				F83C3E4129A5D2DE00A65FBE /* ManagedSection+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,15 +23,18 @@ struct Link: Decodable {
     }
 }
 
-struct Section: Decodable {
+struct Section {
     let title: String
     let uuid: UUID
+}
+
+extension Section: Decodable {
     
     enum CodingKeys: String, CodingKey {
         case title
         case uuid = "id"
     }
-
+    
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.title = try container.decode(String.self, forKey: .title)
