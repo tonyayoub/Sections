@@ -22,6 +22,9 @@ struct HomeView: View {
         .task {
             await syncing.syncWithBackend()
         }
+        .refreshable {
+            await syncing.syncWithBackend()
+        }
     }
 }
 
@@ -34,7 +37,7 @@ private let itemFormatter: DateFormatter = {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        let syncing = Syncing(service: ViaPageService(), store: CoreDataSectionStore(context: PersistenceController.preview.container.viewContext))
+        let syncing = Syncing(service: MockService(), store: CoreDataSectionStore(context: PersistenceController.preview.container.viewContext))
         HomeView(syncing: syncing).environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
     }
 }

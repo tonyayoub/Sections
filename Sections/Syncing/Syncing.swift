@@ -8,8 +8,8 @@
 import CoreData
 
 class Syncing {
-    let service: PageService
-    let store: SectionStore
+    private let service: PageService
+    private let store: SectionStore
     
     init(service: PageService, store: SectionStore) {
         self.service = service

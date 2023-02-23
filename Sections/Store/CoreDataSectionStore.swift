@@ -16,7 +16,6 @@ class CoreDataSectionStore: SectionStore {
     }
     
     func updateSections(sections: [Section]) {
-//        clearExistingSections()
         do {
         let backendIDs = sections.map { $0.uuid }
         let alreadyExistingIDs = try ManagedSection.deleteExtraLocalSections(
@@ -34,18 +33,5 @@ class CoreDataSectionStore: SectionStore {
         } catch {
             print("Error saving new sections: \(error.localizedDescription)")
         }
-    }
-
-    func clearExistingSections() {
-        do {
-            let fetchRequest = ManagedSection.fetchRequest()
-            let sections = try context.fetch(fetchRequest)
-            sections.forEach {
-                context.delete($0)
-            }
-        } catch {
-            print("Error deleting existing sections.\(error.localizedDescription)")
-        }
-        
     }
 }
