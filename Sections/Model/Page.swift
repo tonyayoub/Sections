@@ -38,7 +38,6 @@ extension Section: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: CodingKeys.self)
         self.title = try container.decode(String.self, forKey: .title)
-        print("title: \(title)")
         if let uuid = try? container.decode(UUID.self, forKey: .uuid) {
             self.uuid = uuid
         } else {

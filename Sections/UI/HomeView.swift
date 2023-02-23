@@ -16,8 +16,10 @@ struct HomeView: View {
     private var sections: FetchedResults<ManagedSection>
 
     var body: some View {
-        List(sections) { language in
-            Text(language.title ?? "Unknown")
+        List(sections) {
+            if let title = $0.title {
+                Text(title)
+            }
         }
         .task {
             await syncing.syncWithBackend()

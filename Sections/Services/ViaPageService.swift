@@ -15,8 +15,7 @@ struct ViaPageService: PageService {
         do {
             let (data, _) = try await URLSession.shared.data(from: url)
             let page = try JSONDecoder().decode(Page.self, from: data)
-            let sections = page.links.sections.map { Section(title: $0.title, uuid: $0.uuid) }
-            return sections
+            return page.links.sections.map { Section(title: $0.title, uuid: $0.uuid) }
         } catch {
             print("Error decoding api response: \(error.localizedDescription)")
             return []
